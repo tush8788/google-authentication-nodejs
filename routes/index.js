@@ -10,4 +10,7 @@ router.use('/user',require('./user'));
 router.use('/post',require('./post'));
 //comments
 router.use('/comment',require('./comment'));
+
+//google auth
+router.use('/authentication/auth',require('./user'));
 module.exports=router;

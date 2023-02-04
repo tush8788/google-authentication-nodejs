@@ -30,4 +30,9 @@ router.post('/create-session',passport.authenticate(
 //update users information
 router.post('/update/:id',passport.checkAuthentication,userController.updateUserInfo);
 
+//google auth
+router.get('/googleAuth',passport.authenticate('google',{scope:['profile','email']}));
+
+router.get('/google/callback',passport.authenticate('google',{failureRedirect:'/user/signin'}),userController.createSession);
+
 module.exports=router;

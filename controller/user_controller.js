@@ -67,7 +67,7 @@ module.exports.profile = async function (req, res) {
     try {
 
         let user = await UserDB.findById(req.params.id);
-
+        // console.log(user);
         return res.render('profile', {
             title: "Profile",
             profile_user: user

@@ -5,6 +5,8 @@ const db=require('./config/mongoose');
 const port=8000;
 const passport=require('passport');
 const LocalStrategy=require('./config/passport-local-strategy');
+//import google strategy
+const googleStrategy=require('./config/passport-google-oauth');
 const expressSession=require('express-session');
 const mongoStore=require('connect-mongo');
 const flash = require('connect-flash');

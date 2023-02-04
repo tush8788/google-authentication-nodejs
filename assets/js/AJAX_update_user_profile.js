@@ -40,6 +40,7 @@
                 <input type="hidden" name="id" value="${newUserInfo.user._id}" required><br>&nbsp;&nbsp;&nbsp;
                 <input type="submit" value="Update">
             </form>
+            <script>updateProfile()</script>
         `)
     }
 
